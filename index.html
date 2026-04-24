@@ -109,6 +109,114 @@
   transform: scale(1.1);
 }
 
+.projects-themed {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255, 189, 57, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 94, 58, 0.15), transparent 26%),
+    linear-gradient(135deg, #07111f 0%, #0d1b2a 45%, #111827 100%);
+}
+
+.projects-themed:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+              linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.projects-themed .container {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-themed .big,
+.projects-themed .big-2 {
+  color: rgba(255, 255, 255, 0.07);
+}
+
+.projects-themed .heading-section h2,
+.projects-themed .heading-section p {
+  color: #f8fafc;
+}
+
+.project-card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(19, 31, 52, 0.96), rgba(10, 18, 32, 0.98));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.project-card .block-20 {
+  position: relative;
+}
+
+.project-card .block-20:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 15, 28, 0.04), rgba(8, 15, 28, 0.55));
+}
+
+.project-card .text {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 1.5rem;
+}
+
+.project-card .heading a {
+  color: #ffffff;
+}
+
+.project-card .heading a:hover {
+  color: #ffbd39;
+}
+
+.project-card p {
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.project-tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.9rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, rgba(255, 189, 57, 0.25), rgba(255, 94, 58, 0.18));
+  color: #ffd36a;
+  border: 1px solid rgba(255, 189, 57, 0.18);
+}
+
+.project-links {
+  margin-top: auto;
+}
+
+.project-links a {
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffbd39;
+}
+
+.project-links a:hover {
+  color: #ffffff;
+}
+
+.project-links a:last-child {
+  margin-right: 0;
+}
+
 
 </style>
 
@@ -328,43 +436,57 @@
 
    
 
-    <section class="ftco-section" id="project-section">
+    <section class="ftco-section projects-themed" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <p>A curated selection of my strongest builds, presented with a sharper product-style look to match the rest of the portfolio.</p>
           </div>
         </div>
 				<div class="row d-flex">
-					<div class="col-md-4 d-flex ftco-animate mb-4">
-						<div class="blog-entry justify-content-end shadow rounded-lg h-100">
-							<a href="https://github.com/vinaykumarbharwal/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect rounded-top" style="background-image: url('images/proj_1.jpg'); min-height:200px;">
+					<div class="col-md-6 col-lg-4 d-flex ftco-animate mb-4">
+						<div class="blog-entry project-card justify-content-end shadow rounded-lg h-100">
+							<a href="https://github.com/vinaykumarbharwal/Wildfire_Detection" class="block-20 zoom-effect rounded-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.35)), url('images/proj_4.png'); min-height:220px;">
 							</a>
 							<div class="text mt-3 float-right d-block">
-								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a></h3>
-								<p>Analyzed music store data using advanced SQL queries to identify gaps and increase business growth.</p>
+								<span class="project-tag">Edge AI</span>
+								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/Wildfire_Detection">Wildfire Detection</a></h3>
+								<p>Agniveer is a real-time wildfire detection platform that uses Edge AI on mobile endpoints for fast fire spotting, even in low-connectivity environments.</p>
+								<p class="project-links mb-0">
+									<a href="https://github.com/vinaykumarbharwal/Wildfire_Detection">View Repo</a>
+									<a href="https://wildfire-detection-theta.vercel.app">Live Demo</a>
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 d-flex ftco-animate mb-4">
-						<div class="blog-entry justify-content-end shadow rounded-lg h-100">
-							<a href="https://github.com/vinaykumarbharwal/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect rounded-top" style="background-image: url('images/proj_2.jpg'); min-height:200px;">
+					<div class="col-md-6 col-lg-4 d-flex ftco-animate mb-4">
+						<div class="blog-entry project-card justify-content-end shadow rounded-lg h-100">
+							<a href="https://github.com/vinaykumarbharwal/CUHP-CTF-Platform" class="block-20 zoom-effect rounded-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.35)), url('images/proj_5.png'); min-height:220px;">
 							</a>
 							<div class="text mt-3 float-right d-block">
-								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>
-								<p>Performed exploratory data analysis on Diwali sales data using Python to improve customer insights.</p>
+								<span class="project-tag">Full Stack</span>
+								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/CUHP-CTF-Platform">CUHP CTF Platform</a></h3>
+								<p>A full-stack Capture The Flag platform with team-based play, live leaderboards, tie-breaking logic, score graphs, and challenge categories for competitions.</p>
+								<p class="project-links mb-0">
+									<a href="https://github.com/vinaykumarbharwal/CUHP-CTF-Platform">View Repo</a>
+									<a href="https://cuhp-ctf-2026.vercel.app">Live Demo</a>
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 d-flex ftco-animate mb-4">
-						<div class="blog-entry shadow rounded-lg h-100">
-							<a href="https://github.com/vinaykumarbharwal/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect rounded-top" style="background-image: url('images/proj_3.jpg'); min-height:200px;">
+					<div class="col-md-6 col-lg-4 d-flex ftco-animate mb-4">
+						<div class="blog-entry project-card shadow rounded-lg h-100">
+							<a href="https://github.com/vinaykumarbharwal/search-ranking" class="block-20 zoom-effect rounded-top" style="background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.35)), url('images/proj_3.png'); min-height:220px;">
 							</a>
 							<div class="text mt-3 float-right d-block">
-								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
-								<p>Designed a Power BI dashboard for Madhav Store to track and analyze online sales data across India.</p>
+								<span class="project-tag">FastAPI</span>
+								<h3 class="heading"><a href="https://github.com/vinaykumarbharwal/search-ranking">Search Ranking Engine</a></h3>
+								<p>A lightweight ranking engine built with FastAPI and XGBoost LambdaMART that uses semantic text features for localized, on-the-fly document ranking.</p>
+								<p class="project-links mb-0">
+									<a href="https://github.com/vinaykumarbharwal/search-ranking">View Repo</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -400,7 +522,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<div class="heading"> <h4> Explore more of my current repositories, experiments, and shipped builds on GitHub. </h4>
 						<br>
 						<p><a href="https://github.com/vinaykumarbharwal" class="btn btn-primary py-3 px-5">GitHub</a></p>
 						</div>
