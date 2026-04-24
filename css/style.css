@@ -1,3 +1,133 @@
+/* === Modern Responsive & UI Enhancements === */
+/* Navbar Modernization */
+.navbar {
+  padding: 1rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.navbar-nav .nav-link {
+  font-size: 1.08rem;
+  padding: 0.7rem 1.2rem;
+  color: #fff;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 0.5rem;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+  color: #212529;
+  background: #ffc107;
+}
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* About Section Modernization */
+.img-about {
+  min-height: 220px;
+  background: #222;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.img-about .overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 1.5rem 1rem;
+  border-radius: 1.5rem;
+  height: 100%;
+}
+.about-img img {
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(255,193,7,0.15);
+}
+.about-info p {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.skill-mf .progress {
+  height: 8px;
+  margin-bottom: 0.7rem;
+  background: #343a40;
+  border-radius: 4px;
+}
+.skill-mf .progress-bar {
+  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+}
+@media (max-width: 767.98px) {
+  .img-about {
+    min-height: 160px;
+    margin-bottom: 2rem;
+  }
+  .about-img img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Project Cards Modernization */
+.blog-entry {
+  background: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.blog-entry:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+.block-20 {
+  border-radius: 1.2rem 1.2rem 0 0;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 991.98px) {
+  .blog-entry {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Social Icons Modernization */
+.ftco-footer-social li a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.7rem;
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background: rgba(33,37,41,0.12);
+}
+.ftco-footer-social li a:hover, .ftco-footer-social li a:focus {
+  color: #212529;
+  background: #ffc107;
+  transform: scale(1.12);
+}
+@media (max-width: 767.98px) {
+  .ftco-footer-social li a {
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
